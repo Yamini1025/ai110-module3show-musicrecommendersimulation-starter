@@ -29,6 +29,8 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+My understanding of how real-world recommendations systems work is that they use user behavior signals like what you played, liked, skipped, etc., item characteristics such as genre, tempo, mood, energy, etc., and ranking models, which score many candidate songs and present the best ones first. My version will prioritize genre as the main feature, along with mood and energy, and give a smaller preference to acousticness as well, if the user likes or dislikes acoustic songs. Each Song uses : genre, mood, energy, tempo_bpm, valence, acousticness, and artist and title for identification. The UserProfile stores a favorite genre, a favorite mood, a target energy level, and a preference for whether the user likes acoustic songs. The Recommender computes a score for each song by comparing the song's features to the user's preferences. For example, it gives a strong reward if the song matches the user's preferred genre. It gives a smaller reward if the song matches the preferred mood. 
+
 ---
 
 ## Getting Started
